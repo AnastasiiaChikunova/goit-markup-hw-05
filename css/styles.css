@@ -13,6 +13,7 @@
   --customers-color :#8E8F99;
   --indent: 24px;
   --item: 3;
+  --anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   font-family: var(--primary-font);
@@ -137,7 +138,7 @@ img {
 display: flex;
   align-items: center;
   gap: 40px;
-position: relative;
+
 }
 .menu-item {
   font-weight: 500;
@@ -145,32 +146,37 @@ position: relative;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--background-color-hero-section);
-  padding-top: 24px;
+    padding-top: 24px;
   padding-bottom: 24px;
-  
+  position: relative;
+ 
 
 }
-
-  
-.header-nav-link::after{
+.header-nav-link{
+  color: var(--background-color-hero-section)  ;
+  transition: color var(--anim);
+}
+.header-nav-link:hover,
+.header-nav-link:focus {
+  color: var(--accent-color);
+}
+.header-nav-link::after {
   content: "";
+  display: block;
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background: var(--accent-color);
   position: absolute;
   bottom: 0px;
   left: 0;
-     display: block;
-
 }
 
 
-.menu-item:hover,
-.menu-item:focus {
-  color: var(--accent-color);
+.header-nav-link.active::after{
+  background-color: var(--accent-color);
+
 }
+
 
 .address {
   font-style: normal;
@@ -182,15 +188,17 @@ position: relative;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--primary-color);
+  transition: color var(--anim)
 }
-.address-menu-item:hover,
-.address-menu-item:focus {
-  color: var(--accent-color);
-}
+
 .address-menu {
   display: flex;
   align-items: center;
   gap: 40px;
+}
+.address-menu-item:hover,
+.address-menu-item:focus {
+  color: var(--accent-color);
 }
 
 /* **********************************************************main *****************************************************/
@@ -243,7 +251,8 @@ position: relative;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15)  ;
+  transition: background-color var(--anim);
 }
 .modal-button:hover,
 .modal-button:focus {
@@ -329,6 +338,7 @@ margin-bottom: 8px;
   height: 40px;
   background-color: var(--buttom-portfolio-text-color);
   border-radius: 50%;
+  transition: background-color var(--anim);
   
 }
 .social-link:hover,
@@ -371,6 +381,7 @@ height: 88px;
 border: 1px solid #8E8F99;
 border-radius: 4px;
 color:var(--customers-color);
+transition: color var(--anim);
 
 }
 .customers-link:hover,
@@ -381,6 +392,7 @@ color:var(--customers-color);
 
 .customers-logos{
   fill: #8E8F99;
+  transform: color var(--anim);
 }
 .customers-link:hover .customers-logos,
 .customers-link:focus .customers-logos{
@@ -518,4 +530,59 @@ margin-right: 120px;
   border: 1px solid var(--border-buttoms-color);
   border-top: none;
 }
+.portfolio-thumb{
+position: relative;
+}
+/* OVERLAY */
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 40px;
+  padding-right: 32px;
+  padding-left: 32px;
+  width: 100%;
+  height: 100%;
+}
+.overlay-text{
+  color: var(--buttom-portfolio-background-color);
+}
+/********************* Modal window***************************** */
+.backdrop{
+width: 100%;
+height: 100%;
+position: fixed;
+top: 0;
+left: 0;
+background-color: rgba(46, 47, 66, 0.4);;
+display: none;
+}
+.modal{
+  width: 408px;
+  height: 584px;
+  background: #FCFCFC;
+  border-radius: 4px;
+  position: absolute;
+  top: calc(50% - 292px) ;
+  left: calc(50% - 204px)  ;
+}
+.modal-close-btn{ 
+  position: absolute;
+  right: 0%;
+  top: 0%;
 
+  background: var(--border-buttoms-color);
+  width: 24px;
+  height: 24px;
+  padding: 0;
+
+  border-radius: 50%;
+  border: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .modal-close-icon{
+  background: var(--background-color-hero-section);
+ }
