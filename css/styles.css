@@ -147,11 +147,13 @@ img {
   letter-spacing: 0.02em;
   padding-top: 24px;
   padding-bottom: 24px;
-  position: relative;
+
 }
 .header-nav-link {
   color: var(--background-color-hero-section);
   transition: color var(--anim);
+  position: relative;
+  color:  #2E2F42;
 }
 .header-nav-link:hover,
 .header-nav-link:focus {
@@ -166,6 +168,7 @@ img {
   position: absolute;
   bottom: 0px;
   left: 0;
+  bottom: -1px;
 }
 
 .header-nav-link.active::after {
@@ -334,8 +337,9 @@ img {
 }
 .social-link:hover,
 .social-link:focus {
-  background-color: var(--accent-color);
-}
+  background-color: var(--accent-color)  ;
+  transition: background-color var(--anim);;
+  }
 
 .cosial-pictures {
   fill: var(--logo-color-part-two-down);
