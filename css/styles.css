@@ -536,7 +536,9 @@ img {
 
 }
 /* OVERLAY */
-.overlay {
+
+.overlay-text {
+  color: var(--buttom-portfolio-background-color);
   position: absolute;
   top: 0;
   left: 0;
@@ -548,9 +550,6 @@ img {
   transform: translateY(100%);
   transition: transform var(--anim);
   background-color: var(--buttom-portfolio-text-color);
-}
-.overlay-text {
-  color: var(--buttom-portfolio-background-color);
 }
 /********************* Modal window***************************** */
 .backdrop {
