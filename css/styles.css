@@ -145,15 +145,19 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  
 
 }
 .header-nav-link {
-  color: var(--accent-color);
+  color: var(--background-color-hero-section);
   transition: color var(--anim);
   position: relative;
-  
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: block;
+}
+.header-nav-link.active {
+  color: var(--accent-color)
 }
 .header-nav-link:hover,
 .header-nav-link:focus {
@@ -166,7 +170,6 @@ img {
   height: 4px;
   border-radius: 2px;
   position: absolute;
-  bottom: 0px;
   left: 0;
   bottom: -1px;
 }
@@ -381,19 +384,19 @@ img {
 .customers-link:hover,
 .customers-link:focus {
   color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .customers-logos {
   fill: #8e8f99;
-  transform: color var(--anim);
+  transition: fill var(--anim);
 }
-.customers-link:hover .customers-logos,
-.customers-link:focus .customers-logos {
+.customers-link:hover.customers-logos,
+.customers-link:focus.customers-logos {
   fill: var(--accent-color);
 }
-.customers-link:hover,
-.customers-link:focus {
-  border-color: var(--accent-color);
+.customers-logos{
+  fill: currentColor;
 }
 /* *********************************************************footer *****************************************************/
 .footer {
@@ -424,11 +427,6 @@ img {
 .social-link-footer:focus {
   background-color: #31d0aa;
 }
-.social-link-footer{
-  transition: background-color var(--anim);
-}
-
-
 .menu-socisl-footer {
   gap: 16px;
   margin-top: auto;
@@ -617,10 +615,9 @@ background-color: var(--accent-color);
 border: none;
 }
 .modal-close-icon {
-  background: var(--background-color-hero-section);
-  transition: fill var(--anim);
+transition: fill var(--anim);
 }
-.modal-close-icon:hover,
+.modal-close-btn:hover,
 .modal-close-btn:focus{
   fill: var(--background-color-site)
 
