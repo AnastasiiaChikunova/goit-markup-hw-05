@@ -333,7 +333,7 @@ img {
   height: 40px;
   background-color: var(--buttom-portfolio-text-color);
   border-radius: 50%;
-  transition: background-color var(--anim)
+  transition: background-color var(--anim);
 }
 .social-link:hover,
 .social-link:focus {
@@ -376,7 +376,7 @@ img {
   border: 1px solid #8e8f99;
   border-radius: 4px;
   color: var(--customers-color);
-  transition: color var(--anim), border-color var(--anim);
+  transition: color var(--anim),border-color var(--anim);
 }
 .customers-link:hover,
 .customers-link:focus {
@@ -517,16 +517,17 @@ img {
    transition: box-shadow var(--anim);
   
 }
-.portfolio-item:hover.overlay-text {
+.overlay-text:hover {
   transform: translateY(0%);
 }
-.portfolio-item:focus.overlay-text{
+.overlay-text:focus{
   transform: translateY(0%);
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    
 }
 
 .portfolio-cards {
@@ -542,6 +543,7 @@ img {
   overflow: hidden;
 
 }
+
 /* OVERLAY */
 
 .overlay-text {
@@ -554,7 +556,7 @@ img {
   transition: transform var(--anim);
   background-color: var(--buttom-portfolio-text-color);
   padding: 40px 32px;
-    transform: translateY(100%);
+  transform: translateY(100%);
 }
 
 /********************* Modal window***************************** */
@@ -568,7 +570,7 @@ img {
   z-index: var(--modal-idx);
   transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
   visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: opasity var(--anim);
+    transition: opasity var(--anim), visibility var(--anim);
 }
 .is-hidden {
   opacity: 0;
