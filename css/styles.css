@@ -376,7 +376,7 @@ img {
   border: 1px solid #8e8f99;
   border-radius: 4px;
   color: var(--customers-color);
-  transition: color var(--anim), border-color var(--anim);
+  transition: border-color var(--anim), color var(--anim);
 }
 .customers-link:hover,
 .customers-link:focus {
