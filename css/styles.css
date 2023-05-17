@@ -376,7 +376,7 @@ img {
   border: 1px solid #8e8f99;
   border-radius: 4px;
   color: var(--customers-color);
-  transition: color var(--anim),border-color var(--anim);
+  transition: color var(--anim), border-color var(--anim);
 }
 .customers-link:hover,
 .customers-link:focus {
@@ -427,9 +427,7 @@ img {
 .social-link-footer{
   transition: background-color var(--anim);
 }
-.social-link {
-  transition: backgrond-color var(--anim);
-}
+
 
 .menu-socisl-footer {
   gap: 16px;
@@ -517,10 +515,10 @@ img {
    transition: box-shadow var(--anim);
   
 }
-.overlay-text:hover {
+.portfolio-link:hover .overlay-text {
   transform: translateY(0%);
 }
-.overlay-text:focus{
+.portfolio-link:focus .overlay-text {
   transform: translateY(0%);
 }
 .portfolio-link:hover,
@@ -568,9 +566,8 @@ img {
   left: 0;
   background-color: rgba(46, 47, 66, 0.4);
   z-index: var(--modal-idx);
-  transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-  visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: opasity var(--anim), visibility var(--anim);
+  transition: opacity var(--anim), visibility var(--anim);
+    
 }
 .is-hidden {
   opacity: 0;
